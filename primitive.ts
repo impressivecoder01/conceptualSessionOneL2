@@ -40,3 +40,34 @@ const buyer = {
 
 const {nam,address,contactNumber} = buyer
 console.log(nam,address,contactNumber)
+
+type Tproduct = {
+    productNm: string,
+    price: number,
+    address: {
+        thana: 'madaripur',
+        zipcode: number
+    }
+}
+
+const item: Tproduct ={
+    productNm: 'Sugar',
+    price: 80,
+    address: {
+        thana: 'madaripur',
+        zipcode: 3434
+    }
+}
+
+type tPaymentMethod = 'bkash' | 'rocket' | 'nagod' | 'mcash';
+let payment: tPaymentMethod = 'bkash'
+type User = {
+    name: string,
+}
+type TSeller = User & {
+    shopNamee: string
+}
+const sellerName: TSeller = {
+    name: 'sss',
+    shopNamee: 'sfs'
+}
