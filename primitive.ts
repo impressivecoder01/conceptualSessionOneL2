@@ -71,3 +71,25 @@ const sellerName: TSeller = {
     name: 'sss',
     shopNamee: 'sfs'
 }
+
+// ternary , nullish, optional chaining
+const stock = 0;
+const statuss = stock > 0 ? 'ache' : 'ni'
+console.log( statuss);
+//ternary
+const discountPrice = products.discount ?? 0;
+// null , undefined
+console.log(discountPrice);
+const seller = products?.shopName
+
+let userInput : unknown
+function porcessInput(input: unknown){
+    // ( userInput as string).toUpperCase()
+    if(typeof input === 'string'){
+        input.toUpperCase()
+    }
+}
+
+function throwError(msg: string): never {
+    throw new Error(msg)
+}
